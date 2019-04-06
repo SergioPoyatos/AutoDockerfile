@@ -1,5 +1,3 @@
-FROM alpine
-RUN apk update && apk add nodejs
-COPY . /app
-WORKDIR /app
-CMD ["node", "index.js"]
+FROM busybox
+USER 10001
+CMD ["echo", "Hello Docker!"]
